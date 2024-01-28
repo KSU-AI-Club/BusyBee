@@ -4,9 +4,14 @@ The goal of project Busy Bee is to create a lightweight object detection model c
 # setup
 
 create a venv
+
 python -m venv ./busybee_venv
 
 install dependencies
+
 pip install -r requirements.txt
+
+# TODO
+create a link to setup on the likes of huggingface or google colab
 
 🐝
