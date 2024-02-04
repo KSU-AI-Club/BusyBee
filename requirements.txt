@@ -6,3 +6,5 @@ tqdm
 Pillow
 matplotlib
 seaborn
+ipywidgets
+vit_torch
