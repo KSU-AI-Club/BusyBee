@@ -175,9 +175,41 @@ class training_statistics:
         train_size = int(0.8 * dset_size)
         test_size = dset_size - train_size
 
+             #split dataset into 5 pieces 
+        splitindex_1 = [dset_size/5] #split after fifth of dataset
+        splitindex_2 = [2 * dset_size/5] #split after 2/5
+        splitindex_3 = [3 * dset_size/5] #split after 3/5
+        splitindex_4 = [4 * dset_size/5] #split after 4/5
+
+        subset1 = torch.utils.data.Subset(dset,indices = range(0,splitindex_1))
+        subset2 = torch.utils.data.Subset(dset,indices = range(splitindex_1,splitindex_2))
+        subset3 = torch.utils.data.Subset(dset,indices = range(splitindex_2,splitindex_3))
+        subset4 = torch.utils.data.Subset(dset,indices = range(splitindex_3,splitindex_4))
+        subset5 = torch.utils.data.Subset(dset,indices = range(splitindex_4,dset_size))
+    
+
+    #k fold distribution - there are 5 iterations 
+
+        self.train_dl = DataLoader(torch.utils.data.ConcatDataset(subset2,subset3,subset4,subset5), batch_size = self.batch_size,shuffle = False)
+        self.test_d1 = DataLoader(subset1, batch_size = self.batch_size, shuffle = False)
+
+        self.train_d2 = DataLoader(torch.utils.data.ConcatDataset(subset1,subset3,subset4,subset5), batch_size = self.batch_size,shuffle = False)
+        self.test_d2 = DataLoader(subset2, batch_size = self.batch_size, shuffle = False)
+
+        self.train_d3 = DataLoader(torch.utils.data.ConcatDataset(subset1,subset2,subset4,subset5), batch_size = self.batch_size,shuffle = False)
+        self.test_d3 = DataLoader(subset3, batch_size = self.batch_size, shuffle = False)
+
+        self.train_d4 = DataLoader(torch.utils.data.ConcatDataset(subset1,subset2,subset3,subset5), batch_size = self.batch_size,shuffle = False)
+        self.test_d4 = DataLoader(subset4, batch_size = self.batch_size, shuffle = False)
+
+        self.train_d4 = DataLoader(torch.utils.data.ConcatDataset(subset1,subset2,subset3,subset4), batch_size = self.batch_size,shuffle = False)
+        self.test_d5 = DataLoader(subset5, batch_size = self.batch_size, shuffle = False)
+
+"""
         train, test = torch.utils.data.random_split(dset, [train_size, test_size], generator=g)
 
         # Create Data Loaders from splits
         self.train_dl = DataLoader(train, batch_size=self.batch_size, shuffle=True)
         self.test_dl = DataLoader(test, batch_size=self.batch_size, shuffle=True)
+"""
 
