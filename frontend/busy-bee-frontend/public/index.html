@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,41 +12,35 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+   
     <title>Busy Bee- AI Club KSU</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      THIS IS A TEMPLATE FILE!
-      We need to edit this accordingly with all the information
-      that is relevant to out own project.
+    <div className="App">
+      <header>
 
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+       //header section
+      </header>
+      <h1>Welcome to BusyBee!</h1>
+      <p>
+        BusyBee is a lightweight object detection model
+        which can decipher what species a bee is and return
+        information based on said species.        </p>
       
-      USE THE NEXT LINE TO START THE LIVE TEST!
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-
-      WE WILL DELETE THIS WHEN WE ARE DONE.
-      -KESHAUN
-    -->
+      <div className="card">
+      <button><a href="upload.html">Upload Photo(s)</a></button>
+      <button><a href="live.html">Live Detection</a></button>
+      </div>
+      <div>
+        <p>For the model team, we decided to go through seperate paths and test different state of the art models. 
+          This includes Vision Transformers (ViT) and Large-Scale Convolutional Models (ResNet18, ResNet 50, VGG-16, etc.). 
+          As of now, we are researching and experimenting different hyperparameter tuning, learning the insights of machine 
+          learning libraries such as PyTorch and TensorFlow, and  experimenting with object detection models such as YoloV8.
+        </p>     
+        <p>//backend team description </p>
+        <p>//frontend team description</p></div>
+    </div>
   </body>
 </html>
