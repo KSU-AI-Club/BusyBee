@@ -1,1 +1,8 @@
-tmp file for structuring
+This text file can be used to record notes on what changes are made.
+2/18/2024 {
+    started css file made for inhereting. Vision of yellow box text with grey box sub text.
+    then alternating with black box backgorund for next section of text. Aiming to mimic the scheme of the KSU website
+    feels more official that way
+    -Kee
+}
+

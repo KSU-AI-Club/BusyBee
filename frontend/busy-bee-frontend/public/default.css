@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 245, 245);
+}
+
+button {
+    font-size: 18px;
+    background-color: rgb(255, 198, 41);
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    background-color: rgb(255, 198, 41);
+}
+h3 {
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 198, 41);
+    text-decoration-thickness: 0.25em;
+}
+
+.direct {
+    text-align: center;
+}
+
+.description {
+    background-color: rgb(245, 245, 245);
+}
+
+.main-header {
+    background-color: rgb(255, 198, 41);
+    background-size: cover;
+    font-size: x-large;
+    text-align: center;
+    
+    /*to ensure the header is completely yellow*/
+}
