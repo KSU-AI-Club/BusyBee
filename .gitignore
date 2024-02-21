@@ -1,3 +1,6 @@
 # ignore venv
 # you could/should name your venv as such:
 busybee_venv
+
+# Ignore Data -- Pull from Google Drive (Search Discord Channel for link)
+data
