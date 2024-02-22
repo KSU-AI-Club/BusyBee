@@ -1,46 +1,54 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Meta tags and info -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta name="description" content="BusyBee is a lightweight object detection model
+      which can decipher what species a bee is and return
+      information based on said species."/>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="default.css">
     
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-   
     <title>Busy Bee- AI Club KSU</title>
   </head>
   <body>
-    <div className="App">
-      <header>
-
-       //header section
+    <div>
+      <header class="main-header">
+        KSU AI-CLUB BUSY BEE
       </header>
-      <h1>Welcome to BusyBee!</h1>
+      <h1>Welcome to Project BusyBee!</h1>
+      <!-- Image for Our Homepage-->
+      <image src="images\ksu_logo.png" width="100"></image>
       <p>
         BusyBee is a lightweight object detection model
         which can decipher what species a bee is and return
-        information based on said species.        </p>
+        information based on said species. You can choose to
+        either upload files to be tested or use a live camera
+        feed.
+      </p>
       
-      <div className="card">
-      <button><a href="upload.html">Upload Photo(s)</a></button>
-      <button><a href="live.html">Live Detection</a></button>
+      <div class="direct">
+        <button><a href="upload.html">Upload Photo(s)</a></button>
+        <button><a href="live.html">Live Detection</a></button>
       </div>
-      <div>
-        <p>For the model team, we decided to go through seperate paths and test different state of the art models. 
+      <div class="description">
+        <h2>Hoot from Our Teams!</h2>
+        <p>
+          <h3>MODEL TEAM</h2>
+          For the model team, we decided to go through seperate paths and test different state of the art models. 
           This includes Vision Transformers (ViT) and Large-Scale Convolutional Models (ResNet18, ResNet 50, VGG-16, etc.). 
           As of now, we are researching and experimenting different hyperparameter tuning, learning the insights of machine 
           learning libraries such as PyTorch and TensorFlow, and  experimenting with object detection models such as YoloV8.
         </p>     
-        <p>//backend team description </p>
-        <p>//frontend team description</p></div>
+        <p>
+          <h3>BACKEND TEAM</h2>
+          //backend team description </p>
+        <p>
+          <h3>FRONTE END TEAM</h2>
+          //frontend team description</p></div>
     </div>
   </body>
+  <footer>
+      display necessary footer information like licensing or anything else
+  </footer>
 </html>
