@@ -10,7 +10,7 @@ import pandas as pd
 import requests
 from PIL import Image
 
-save_path = Path(r"C:\Users\Brand\Documents\Branden's Stuff\Python\Machine Learning\PyTorch\bee_data")
+save_path = Path(r"./data/")
 
 class BusyBeeScraping:
     def __init__(self, dataset, cores) -> None:
