@@ -13,9 +13,9 @@ from PIL import Image
 save_path = Path(r"./data/")
 
 class BusyBeeScraping:
-    def __init__(self, dataset, cores) -> None:
+    def __init__(self, dataset) -> None:
         self.dataset = dataset
-        self.cores = cores
+        self.save_path = Path(os.getcwd())
     
     def k_split_bee_images(self, k: int) -> list[pd.DataFrame]:
         
@@ -85,3 +85,18 @@ class BusyBeeScraping:
             
         end = time.perf_counter()
         print(f"Finished in {round((end-start) / 60, 2)} minutes(s)")
+
+    def set_save_path(self, save_path: Path=save_path):
+        """
+        Sets save_path from user input if save_path 
+        is not a valid folder/directory.
+        
+        Args:
+            save_path (Path): the save_path for where you want to store your data
+        """
+        while(not save_path.is_dir()):
+            self.save_path = Path(str(input("Enter the path of where the data is to be stored: ")))
+            if (save_path.is_dir()):
+                break
+            else:
+                print("Invalid path!")
