@@ -7,7 +7,7 @@ if [ ! -d ./images ] && [ ! -d ./labels ]; then
     printf "You are in the wrong directory.\nChange directory to the directory that contains images and labels.\n"
     exit 1
 else
-    TRIBES=( "$(basename $(ls */*_[0-9]_*.txt | xargs -I DIR sh -c "echo DIR | tr '_' ' ' | awk '{ print \$1 }'" | uniq))" )
+    TRIBES=( "$(basename -a $(ls */*_[0-9]_*.txt | xargs -I DIR sh -c "echo DIR | tr '_' ' ' | awk '{ print \$1 }'" | uniq))" )
     
     printf "\e[32mCreating Tribe Directories...\e[0m\n"
     mkdir -vp ${TRIBES} 
