@@ -28,7 +28,7 @@
   <p align="center">
 BusyBee 🐝 is an object detection system for detecting and classifying bees on the tribe level 
 <br />
-    ![demo](./demo/bee_vid_annotated.gif)
+    ![](/demo/bee_vid_annotated.gif)
 
 
 
